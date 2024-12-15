@@ -1,0 +1,11 @@
+<launch>
+  <arg name="state_subscriber_topic" default="/ego_state_feedback" />
+  <arg name="mpc_pred_pub_topic" default="/mpc_pred_pose" />      
+        
+
+  <node pkg="vehicle_sim" type="vehicle_sim.py" name="vehicle_sim_node" output="screen">
+    <param name="state_subscriber_topic" value="$(arg state_subscriber_topic )" />
+     <param name="mpc_pred_pub_topic" value="$(arg mpc_pred_pub_topic )" />
+  </node>
+
+</launch>

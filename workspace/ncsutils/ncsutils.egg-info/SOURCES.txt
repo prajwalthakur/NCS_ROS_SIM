@@ -1,0 +1,5 @@
+setup.py
+ncsutils.egg-info/PKG-INFO
+ncsutils.egg-info/SOURCES.txt
+ncsutils.egg-info/dependency_links.txt
+ncsutils.egg-info/top_level.txt

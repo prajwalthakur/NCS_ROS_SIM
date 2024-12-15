@@ -1,0 +1,17 @@
+<launch>
+  <arg name="vehicle_control_topic" default="/vehicle_control" />
+  <arg name="cmd_control_cloud_topic" default="/delayed_cmd_control_cloud" />
+
+  <node pkg="vehicle_interface" type="control_interface.py" name="control_interface_node" output="screen">
+    <param name="control_subscriber_topic" value="$(arg cmd_control_cloud_topic )" />
+    <param name="control_pub_topic" value="$(arg vehicle_control_topic)" />
+  </node>
+
+  <arg name="ego_state_topic" default="/ego_state_feedback" />
+  <arg name="perception_feedback_topic" default="/perception_feedback" />
+  
+  <node pkg="vehicle_interface" type="feedback_interface.py" name="feedback_interface_node" output="screen">
+    <param name="state_subscriber_topic" value="$(arg ego_state_topic )" />
+    <param name="perception_publisher_topic" value="$(arg perception_feedback_topic)" />
+  </node>
+</launch>

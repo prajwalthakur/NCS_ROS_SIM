@@ -1,0 +1,8 @@
+float32 FeedbackFSpeed
+float32 FeedbackRSpeed
+float32 FeedbackFSteer
+float32 FeedbackRSteer
+float32 FeedbackCtrlMsgId
+float32 FeedbackLatency
+int32 FeedbackCtrlIdx
+float64 FeedbackTime

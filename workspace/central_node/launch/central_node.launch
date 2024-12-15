@@ -1,0 +1,14 @@
+<launch>
+
+  <arg name="mpc_pred_topic" default="/mpc_pred_pose" />
+  <arg name="perception_topic" default="/delayed_perception_feedback" />
+  <arg name="control_topic" default="/cmd_control_cloud" />
+
+
+  <node pkg="central_node" type="trajectory_planning_exp.py" name="trajectory_planning_node" output="screen">
+    <param name="mpc_pred_topic" value="$(arg mpc_pred_topic)" />
+    <param name="perception_topic" value="$(arg perception_topic)" />
+    <param name="control_topic" value="$(arg control_topic)" />
+  </node>
+
+</launch>

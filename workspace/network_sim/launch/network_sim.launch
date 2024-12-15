@@ -1,0 +1,18 @@
+<launch>
+
+
+  <arg name="perception_feedback_sub_topic" default="/perception_feedback" />
+  <arg name="delayed_perception_feedback_pub_topic" default="/delayed_perception_feedback" />
+  
+  <arg name="cmd_control_cloud" default="/cmd_control_cloud" />
+  <arg name="delayed_cmd_control_cloud" default="/delayed_cmd_control_cloud" />
+
+  <node pkg="network_sim" type="network_sim.py" name="network_sim_node" output="screen">
+    <param name="perception_feedback_sub_topic" value="$(arg perception_feedback_sub_topic )" />
+    <param name="delayed_perception_feedback_pub_topic" value="$(arg delayed_perception_feedback_pub_topic)" />
+    <param name="cmd_control_cloud" value="$(arg cmd_control_cloud )" />
+    <param name="delayed_cmd_control_cloud" value="$(arg delayed_cmd_control_cloud)" />
+  </node>
+
+
+</launch>
