@@ -19,9 +19,11 @@
 - roslaunch central_node central_node.launch ( cloud computing interface to run high level trajectory planning like : model predictive control )
 
  Without Any Compensation to latency :
+ 
 https://github.com/user-attachments/assets/5a6a5bc8-4fd8-419a-a97d-85287d8640cf
 
 
 With the Proposed Algorithm : 
+
 https://github.com/user-attachments/assets/bfae3642-c812-4235-b260-4092addfe34e
 
